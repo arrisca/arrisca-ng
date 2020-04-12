@@ -1,4 +1,4 @@
-import { AppErrorHandler } from './error-handler';
+import {AppErrorHandler} from './error-handler';
 import {ErrorLogService} from '@core/services/error-log.service';
 
 describe('ErrorHandler', () => {

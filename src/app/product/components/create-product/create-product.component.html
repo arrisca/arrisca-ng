@@ -1,0 +1,24 @@
+<div class="app">
+  <div class="container">
+    <form [formGroup]="searchForm" (ngSubmit)="onSave(formDirective)" #formDirective="ngForm">
+      <mat-form-field appearance="legacy">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Product Name" formControlName="productName" required type="text">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="legacy">
+        <mat-label>Description</mat-label>
+        <input matInput placeholder="Enter Product Description" formControlName="productDescription" required
+               type="text">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="legacy">
+        <mat-label>Cost</mat-label>
+        <input matInput placeholder="Enter Product Cost" formControlName="productCost" required type="number">
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="warn" [disabled]="!searchForm.valid">Save</button>
+      <button mat-raised-button color="accent" (click)="onClear($event, formDirective)">Clear</button>
+    </form>
+  </div>
+</div>

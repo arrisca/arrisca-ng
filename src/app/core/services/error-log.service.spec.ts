@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { ErrorLogService } from './error-log.service';
+import {ErrorLogService} from './error-log.service';
 
 describe('ErrorLogService', () => {
   let service: ErrorLogService;
