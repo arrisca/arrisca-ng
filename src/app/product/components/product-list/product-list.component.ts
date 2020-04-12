@@ -48,4 +48,8 @@ export class ProductListComponent implements OnInit {
     this.productToBeUpdate = {...product};
     this.isUpdateActivated = true;
   }
+
+  trackByFn(index, product) {
+    return index;
+  }
 }
