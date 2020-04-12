@@ -2,6 +2,8 @@ import {ErrorHandler, NgModule, Optional, SkipSelf} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AppErrorHandler} from '@core/services/error-handler';
 import {ErrorLogService} from '@core/services/error-log.service';
+import {AppInterceptor} from '@core/services/appInterceptor';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -9,8 +11,9 @@ import {ErrorLogService} from '@core/services/error-log.service';
     CommonModule
   ],
   providers: [
-    {provide: ErrorHandler, useClass: AppErrorHandler},
-    ErrorLogService
+    ErrorLogService,
+    {provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true},
+    {provide: ErrorHandler, useClass: AppErrorHandler}
   ]
 })
 /**

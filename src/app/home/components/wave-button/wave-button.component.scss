@@ -1,0 +1,36 @@
+.loginButton {
+  margin: 2em auto;
+  display: block;
+}
+
+.liquid-button{
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+  outline: 0;
+  height: 40px;
+  min-width: 100px;
+  background-image: url('../../../../assets/images/liquid.png');
+  background-repeat: repeat-y;
+}
+
+.liquid-button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes wave {
+  0% {
+    background-position: left center;
+    background-size: 0 20px;
+  }
+
+  100% {
+    background-position: 0 200px;
+    background-size: 120px 100px;
+  }
+}
